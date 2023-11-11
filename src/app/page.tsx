@@ -1,5 +1,7 @@
 import { Button } from "@/_components/ui/button";
 import Image from "next/image";
+import { buttonVariants } from "@/_components/ui/button";
+import { cn } from "@/_lib/utils";
 
 export default function Home() {
   return (
@@ -17,9 +19,15 @@ function Hero() {
         <h2 className="text-3xl tracking-wide font-bold lg:pb-8">
           Hi, I&apos;m Mike.
         </h2>
-        <Button className="hidden lg:block font-semibold text-lg">
+        <a
+          href="mailto:mikecebul@gmail.com"
+          className={cn(
+            buttonVariants(),
+            "hidden lg:block font-semibold text-lg"
+          )}
+        >
           Contact Me
-        </Button>
+        </a>
       </div>
       <div className="flex flex-col justify-center items-center relative">
         <svg
@@ -42,14 +50,15 @@ function Hero() {
           <Image
             alt="Profile picture"
             src="/profile_pic.jpg"
-            objectFit="cover"
             width={350}
             height={350}
             className="rounded-full z-10 w-32 sm:w-64 lg:w-48 xl:w-64"
           />
         </div>
       </div>
-      <Button className="font-semibold text-lg lg:hidden">Contact Me</Button>
+      <Button className="font-semibold text-lg lg:hidden rounded-none">
+        Contact Me
+      </Button>
     </div>
   );
 }
