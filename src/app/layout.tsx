@@ -5,6 +5,7 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/_lib/utils";
 import { MainNav } from "@/_components/main-nav";
 import { ThemeProvider } from "@/_components/theme-provider";
+import Chatbot from "@/_components/chatbot";
 export const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
         >
           <MainNav />
           {children}
+          <Chatbot />
         </ThemeProvider>
       </body>
     </html>
