@@ -22,7 +22,7 @@ export function MainNav() {
     <div className="flex justify-center items-center py-8 container relative">
       <p className="text-xl font-bold absolute left-8">MikeCebul</p>
       <NavigationMenu className="justify-around">
-        <NavigationMenuList>
+        <NavigationMenuList className="hidden">
           {siteConfig.NavLinks.map((item) => (
             <NavigationMenuItem key={item.title}>
               <Link href={item.href} legacyBehavior passHref>
