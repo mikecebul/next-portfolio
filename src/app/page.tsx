@@ -95,6 +95,7 @@ function Hero() {
               src="/profile_pic.jpg"
               width={350}
               height={350}
+              priority
               className="rounded-full z-10 w-32 xs:w-48 sm:w-64 lg:w-48 xl:w-64"
             />
           </div>
