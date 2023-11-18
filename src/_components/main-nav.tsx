@@ -19,8 +19,8 @@ export function MainNav() {
   const currentPathName = usePathname();
 
   return (
-    <div className="flex justify-center items-center py-8 container relative">
-      <p className="text-xl font-bold absolute left-8">MikeCebul</p>
+    <div className="flex justify-center items-center py-12 container relative">
+      <p className="text-xl font-bold absolute left-8 lg:left-16">MikeCebul</p>
       <NavigationMenu className="justify-around">
         <NavigationMenuList className="hidden">
           {siteConfig.NavLinks.map((item) => (
@@ -38,7 +38,7 @@ export function MainNav() {
           ))}
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="absolute right-8">
+      <div className="absolute right-8 lg:right-16">
         <ModeToggle />
       </div>
     </div>

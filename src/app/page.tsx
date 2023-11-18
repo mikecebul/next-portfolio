@@ -3,6 +3,14 @@ import Image from "next/image";
 import { buttonVariants } from "@/_components/ui/button";
 import { cn } from "@/_lib/utils";
 import Dots from "@/_components/dots";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/_components/ui/card";
 
 const projects = [
   {
@@ -55,22 +63,24 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="lg:container">
+    <div className="container">
       <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2 relative">
         <div className="space-y-2 text-center lg:text-left justify-center lg:mx-auto">
-          <h1 className="">Software Engineer</h1>
-          <h2 className="text-3xl tracking-wide font-bold lg:pb-8">
+          <h1 className="text-xl">Software Engineer</h1>
+          <h2 className="text-6xl tracking-wide font-bold lg:pb-8">
             Hi, I&apos;m Mike.
           </h2>
-          <a
-            href="mailto:mikecebul@gmail.com"
-            className={cn(
-              buttonVariants(),
-              "hidden lg:block font-semibold text-lg"
-            )}
-          >
-            Contact Me
-          </a>
+          <div className="pt-8">
+            <a
+              href="mailto:mikecebul@gmail.com"
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "hidden lg:block font-semibold text-xl text-center"
+              )}
+            >
+              Contact Me
+            </a>
+          </div>
         </div>
         <div className="flex flex-col justify-center items-center relative">
           <svg
@@ -100,44 +110,48 @@ function Hero() {
             />
           </div>
         </div>
-        <Button className="font-semibold text-lg lg:hidden rounded-none">
+        <Button size="lg" className="font-semibold text-xl lg:hidden w-full">
           Contact Me
         </Button>
         <Dots />
       </div>
-      <Projects />
+      <Cards />
     </div>
   );
 }
 
-function Projects() {
+function Cards() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-6 lg:gap-12">
+      <div className="text-center mb-6 md:mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50">Recent Projects</h2>
+          <p className="text-xl text-slate-500 dark:text-slate-400">Check out some of my most recent projects</p>
+        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:px-6 lg:gap-12">
         {projects.map((project, index) => (
-          <div className="rounded-lg shadow-lg overflow-hidden" key={index}>
-            <Image
-              alt={project.name}
-              className="object-cover object-top w-full h-64"
-              width="300"
-              height="200"
-              src={project.image}
-            />
-            <div className="p-6 bg-white dark:bg-zinc-800">
-              <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">
-                {project.name}
-              </h3>
-              <p className="text-zinc-500 dark:text-zinc-400">
-                {project.description}
-              </p>
+          <Card key={index}>
+            <CardHeader>
+              <CardTitle>{project.name}</CardTitle>
+              <CardDescription>{project.description}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Image
+                src={project.image}
+                alt={project.name}
+                width={300}
+                height={200}
+                className="object-cover object-top rounded-md w-full h-48"
+              />
+            </CardContent>
+            <CardFooter>
               <a
-                className="mt-4 inline-block text-zinc-600 underline dark:text-zinc-300"
+                className={cn(buttonVariants({ variant: "secondary" }), "")}
                 href={project.link}
               >
                 View Code
               </a>
-            </div>
-          </div>
+            </CardFooter>
+          </Card>
         ))}
       </div>
     </section>
