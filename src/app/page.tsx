@@ -2,6 +2,7 @@ import { Button } from "@/_components/ui/button";
 import Image from "next/image";
 import { buttonVariants } from "@/_components/ui/button";
 import { cn } from "@/_lib/utils";
+import Dots from "@/_components/dots";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
 
 function Hero() {
   return (
-    <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2 lg:container">
+    <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2 lg:container relative">
       <div className="space-y-2 text-center lg:text-left justify-center lg:mx-auto">
         <h1 className="">Software Engineer</h1>
         <h2 className="text-3xl tracking-wide font-bold lg:pb-8">
@@ -52,13 +53,14 @@ function Hero() {
             src="/profile_pic.jpg"
             width={350}
             height={350}
-            className="rounded-full z-10 w-32 sm:w-64 lg:w-48 xl:w-64"
+            className="rounded-full z-10 w-32 xs:w-48 sm:w-64 lg:w-48 xl:w-64"
           />
         </div>
       </div>
       <Button className="font-semibold text-lg lg:hidden rounded-none">
         Contact Me
       </Button>
+      <Dots />
     </div>
   );
 }
