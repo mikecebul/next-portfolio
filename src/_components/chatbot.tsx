@@ -11,10 +11,10 @@ const Chatbot = () => {
 
     script.onload = () => {
       window.botpressWebChat.init({
-        botId: "1440a387-ad9b-4507-8fef-143833e2e080",
+        botId: "4517058f-1b74-4b3e-9ece-3e6806bc2b1f",
         hostUrl: "https://cdn.botpress.cloud/webchat/v1",
         messagingUrl: "https://messaging.botpress.cloud",
-        clientId: "1440a387-ad9b-4507-8fef-143833e2e080",
+        clientId: "4517058f-1b74-4b3e-9ece-3e6806bc2b1f",
         composerPlaceholder: "Chat with Mike",
         botConversationDescription: "Actively looking for work",
         botName: "Mike",
