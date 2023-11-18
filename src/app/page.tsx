@@ -66,8 +66,8 @@ function Hero() {
     <div className="container">
       <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-2 relative">
         <div className="space-y-2 text-center lg:text-left justify-center lg:mx-auto">
-          <h1 className="text-xl">Software Engineer</h1>
-          <h2 className="text-6xl tracking-wide font-bold lg:pb-8">
+          <h1 className="text-lg md:text-xl">Software Engineer</h1>
+          <h2 className="text-4xl md:text-6xl tracking-wide font-bold lg:pb-8">
             Hi, I&apos;m Mike.
           </h2>
           <div className="pt-8">
@@ -124,9 +124,13 @@ function Cards() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="text-center mb-6 md:mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50">Recent Projects</h2>
-          <p className="text-xl text-slate-500 dark:text-slate-400">Check out some of my most recent projects</p>
-        </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50">
+          Recent Projects
+        </h2>
+        <p className="text-xl text-slate-500 dark:text-slate-400">
+          Check out some of my most recent projects
+        </p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:px-6 lg:gap-12">
         {projects.map((project, index) => (
           <Card key={index}>
