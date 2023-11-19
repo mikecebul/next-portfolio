@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MikeCebul",
     description: "Portfolio Website for Mike Cebulski.",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 600,
+      },
+    ],
   },
 };
 
