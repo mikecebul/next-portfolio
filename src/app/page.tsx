@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/_components/ui/card";
+import { ContactForm } from "@/_components/contact-form";
 
 const projects = [
   {
@@ -71,15 +72,7 @@ function Hero() {
           Hi, I&apos;m Mike.
         </h2>
         <div className="lg:pt-8">
-          <a
-            href="mailto:mikecebul@gmail.com"
-            className={cn(
-              buttonVariants({ size: "lg" }),
-              "hidden lg:block font-semibold text-xl text-center"
-            )}
-          >
-            Contact Me
-          </a>
+          <ContactForm className="lg:block hidden w-full" />
         </div>
       </div>
       <div className="flex flex-col justify-center items-center relative">
@@ -110,9 +103,7 @@ function Hero() {
           />
         </div>
       </div>
-      <Button size="lg" className="font-semibold text-xl lg:hidden w-full">
-        Contact Me
-      </Button>
+      <ContactForm className="block lg:hidden" />
       <Dots />
     </div>
   );
