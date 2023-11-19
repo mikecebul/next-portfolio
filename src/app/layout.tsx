@@ -14,6 +14,7 @@ export const fontSans = FontSans({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.mikecebul.dev"),
   title: "MikeCebul",
   description: "Portfolio Website for Mike Cebulski.",
   openGraph: {
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
       {
         url: "/opengraph-image.png",
         width: 1200,
-        height: 600,
+        height: 630,
       },
     ],
   },
