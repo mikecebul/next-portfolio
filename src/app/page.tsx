@@ -12,6 +12,7 @@ import {
 } from "@/_components/ui/card";
 import { ContactForm } from "@/_components/contact-form";
 import { siteConfig } from "@/_config/site";
+import { Badge } from "@/_components/ui/badge";
 
 export default function Home() {
   return (
@@ -94,6 +95,15 @@ function Cards() {
                 height={200}
                 className="object-cover object-top rounded-md w-full h-48"
               />
+              <div
+                className="flex flex-wrap space-x-2 space-y-2 pt-4
+              "
+              >
+                <div />
+                {project.technologies.map((tech, index) => (
+                  <Badge key={index}>{tech}</Badge>
+                ))}
+              </div>
             </CardContent>
             <CardFooter>
               <a

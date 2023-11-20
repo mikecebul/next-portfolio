@@ -34,7 +34,7 @@ export const siteConfig = {
         "Prisma",
         "PostgreSQL",
         "Tailwindcss",
-        "Shadcn-ui",
+        "Shadcn/ui",
         "Uploadthing",
       ],
     },
