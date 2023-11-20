@@ -43,7 +43,7 @@ export const siteConfig = {
       description:
         "E-commerce website to sell registration for tournaments and training workshops, tracking tournament stats, and a hall of fame section.",
       image: "/d21_softball.png",
-      link: "/",
+      link: "https://github.com/mikecebul/d21softball-frontend",
       technologies: ["Next.js", "Strapi.js", "Stripe", "MUI"],
     },
   ],
