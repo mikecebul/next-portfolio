@@ -6,6 +6,7 @@ import { cn } from "@/_lib/utils";
 import { MainNav } from "@/_components/main-nav";
 import { ThemeProvider } from "@/_components/theme-provider";
 import Chatbot from "@/_components/chatbot";
+import Footer from "@/_components/footer";
 export const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -51,6 +52,7 @@ export default function RootLayout({
         >
           <MainNav />
           {children}
+          <Footer />
           <Chatbot />
         </ThemeProvider>
       </body>
