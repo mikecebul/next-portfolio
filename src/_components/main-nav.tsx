@@ -3,44 +3,42 @@
 import * as React from "react";
 import Link from "next/link";
 
-import { cn, isActiveRoute } from "@/_lib/utils";
+import { cn } from "@/_lib/utils";
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "@/_components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
-import { siteConfig } from "@/_config/site";
 import { ModeToggle } from "./mode-toggle";
+import { buttonVariants } from "./ui/button";
 
 export function MainNav() {
   const currentPathName = usePathname();
 
   return (
-    <div className="flex justify-center items-center py-12 container relative">
-      <p className="text-xl font-bold absolute left-8 lg:left-16">MikeCebul</p>
-      <NavigationMenu className="justify-around">
-        <NavigationMenuList className="hidden">
-          {siteConfig.NavLinks.map((item) => (
-            <NavigationMenuItem key={item.title}>
-              <Link href={item.href} legacyBehavior passHref>
-                <NavigationMenuLink
-                  className={cn(navigationMenuTriggerStyle(), {
-                    "": isActiveRoute(currentPathName as string, item.href),
-                  })}
-                >
-                  {item.title}
-                </NavigationMenuLink>
+    <header className="container max-w-screen-lg">
+      <div className="flex justify-between items-center py-4 lg:p-12 relative">
+        <p className="text-xl font-bold">MikeCebul</p>
+        <NavigationMenu className="justify-end">
+          <NavigationMenuList className="space-x-4">
+            <NavigationMenuItem>
+              <Link
+                href="/resume.pdf"
+                className={cn(
+                  buttonVariants({ variant: "outline", size: "sm" }),
+                  "font-semibold"
+                )}
+              >
+                CV
               </Link>
             </NavigationMenuItem>
-          ))}
-        </NavigationMenuList>
-      </NavigationMenu>
-      <div className="absolute right-8 lg:right-16">
-        <ModeToggle />
+            <NavigationMenuItem>
+              <ModeToggle />
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
-    </div>
+    </header>
   );
 }

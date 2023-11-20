@@ -1,4 +1,3 @@
-import { Button } from "@/_components/ui/button";
 import Image from "next/image";
 import { buttonVariants } from "@/_components/ui/button";
 import { cn } from "@/_lib/utils";
@@ -12,47 +11,7 @@ import {
   CardTitle,
 } from "@/_components/ui/card";
 import { ContactForm } from "@/_components/contact-form";
-
-const projects = [
-  {
-    name: "Zoom Hybrid Meeting Kiosk",
-    description:
-      "Start a Zoom hybrid meeting without the need for additional Polycom equipment or a Zoom Rooms subscription.",
-    image: "/zoom_kiosk.jpg",
-    link: "https://github.com/mikecebul/zoom-hybrid-meeting-kiosk",
-    technologies: [
-      "Electron.js",
-      "Vite",
-      "React",
-      "Express.js",
-      "Tailwindcss",
-      "Remote Tunnel",
-    ],
-  },
-  {
-    name: "BASES Outpatient Facility",
-    description:
-      "Business website with a dynamic team, services, about us, and donation sections, along with a   custom admin panel",
-    image: "/bases.png",
-    link: "https://github.com/mikecebul/bases",
-    technologies: [
-      "Next.js",
-      "Prisma",
-      "PostgreSQL",
-      "Tailwindcss",
-      "Shadcn-ui",
-      "Uploadthing",
-    ],
-  },
-  {
-    name: "District 21 Softball of Michigan",
-    description:
-      "E-commerce website to sell registration for tournaments and training workshops, tracking tournament stats, and a hall of fame section.",
-    image: "/d21_softball.png",
-    link: "/",
-    technologies: ["Next.js", "Strapi.js", "Stripe", "MUI"],
-  },
-];
+import { siteConfig } from "@/_config/site";
 
 export default function Home() {
   return (
@@ -121,7 +80,7 @@ function Cards() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:px-6 lg:gap-12">
-        {projects.map((project, index) => (
+        {siteConfig.projects.map((project, index) => (
           <Card key={index}>
             <CardHeader>
               <CardTitle>{project.name}</CardTitle>
