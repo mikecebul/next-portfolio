@@ -18,7 +18,7 @@ const projects = [
     name: "Zoom Hybrid Meeting Kiosk",
     description:
       "Start a Zoom hybrid meeting without the need for additional Polycom equipment or a Zoom Rooms subscription.",
-    image: "/project_1.jpg",
+    image: "/zoom_kiosk.jpg",
     link: "https://github.com/mikecebul/zoom-hybrid-meeting-kiosk",
     technologies: [
       "Electron.js",
