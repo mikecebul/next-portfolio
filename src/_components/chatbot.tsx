@@ -19,7 +19,7 @@ const Chatbot = () => {
         botConversationDescription: "Actively looking for work",
         botName: "Mike",
         avatarUrl:
-          "https://media.licdn.com/dms/image/C5603AQFSecKRtzsAgQ/profile-displayphoto-shrink_200_200/0/1660190526587?e=1705536000&v=beta&t=vejEoc1pQmQbUXFKI8qwyqqHeVieC6_xgaCJ9yzSWao",
+          "https://pbs.twimg.com/profile_images/1559218498102083585/TAdvAqjL_400x400.jpg",
       });
     };
   }, []);
